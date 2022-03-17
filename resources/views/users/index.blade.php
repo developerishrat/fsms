@@ -20,7 +20,7 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-body">
-                    <h4 class="card-title">Add New User</h4>
+                    <h3 class="card-title">Add New User</h3>
                         <form action="{{ url('/users/insert') }}" method="post">
                             @csrf
                             <div class="row">

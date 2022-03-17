@@ -28,14 +28,20 @@
                 <span class="availability-status online"></span>
               </div>
               <div class="nav-profile-text">
-                <p class="mb-1 text-black">David Greymaax</p>
+                <p class="mb-1 text-black">{{ Auth::user()->name }}</p>
               </div>
             </a>
             <div class="dropdown-menu navbar-dropdown" aria-labelledby="profileDropdown">
               <a class="dropdown-item" href="#">
                 <i class="mdi mdi-cached mr-2 text-success"></i> Activity Log </a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">
+
+              <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+              document.getElementById('logout-form').submit();">
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                        @csrf
+                    </form>
+
                 <i class="mdi mdi-logout mr-2 text-primary"></i> Signout </a>
             </div>
           </li>
@@ -65,14 +71,14 @@
                 <!--change to offline or busy as needed-->
               </div>
               <div class="nav-profile-text d-flex flex-column">
-                <span class="font-weight-bold mb-2">David Grey. H</span>
-                <span class="text-secondary text-small">Admin</span>
+                <span class="font-weight-bold mb-2">{{ Auth::user()->name }}</span>
+               <!-- <span class="text-secondary text-small">Admin</span>-->
               </div>
               <i class="mdi mdi-bookmark-check text-success nav-profile-badge"></i>
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{ url('home') }}">
+            <a href="{{ url('home') }}" class="nav-link">
               <span class="menu-title">Dashboard</span>
               <i class="mdi mdi-home menu-icon"></i>
             </a>
@@ -93,13 +99,13 @@
           </li>
           -->
           <li class="nav-item">
-            <a class="nav-link" href="{{ 'home' }}">
+            <a class="nav-link" href="{{ 'home ' }}">
               <span class="menu-title">Users</span>
               <i class="mdi mdi-contacts menu-icon"></i>
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="../../pages/forms/basic_elements.html">
+            <a class="nav-link" href="{{ '../../pages/forms/basic_elements.html' }}">
               <span class="menu-title">Forms</span>
               <i class="mdi mdi-format-list-bulleted menu-icon"></i>
             </a>

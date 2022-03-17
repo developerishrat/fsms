@@ -1,5 +1,6 @@
 @extends('layouts.master')
 
+
 @section('content')
 @include('layouts.nav')
       <!-- partial -->
@@ -23,7 +24,7 @@
                 <div class="row justify-content-center">
                     <div class="col-md-12">
                         <div class="card">
-                            <div class="card-header">{{ __('Users Information') }}</div>
+                            <div class="card-header"><h3> All Users Information</h3></div>
 
                             <div class="card-body">
                                 @if (session('status'))
@@ -44,9 +45,9 @@
                                         <th>Action</th>
                                     </tr>
 
-                                    @foreach ($users as $user_info )
+                                    @foreach ($users as $index=>$user_info )
                                     <tr>
-                                        <td>{{ $loop->index+1 }}</td>
+                                        <td>{{ $users->firstitem()+$index }}</td>
                                         <td>{{ $user_info->name }}</td>
                                         <td>{{ $user_info->email }}</td>
                                         <td>{{ $user_info->contact }}</td>
@@ -63,7 +64,9 @@
                                     </tr>
                                     @endforeach
 
+
                                 </table>
+                                {{ $users->links() }}
                             </div>
                         </div>
                     </div>

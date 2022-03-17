@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\FuelController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,3 +24,8 @@ Auth::routes();
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('/adduser',[HomeController::class,'add']);
 Route::post('/users/insert',[HomeController::class,'insert']);
+
+
+//Fuel
+Route::get('/addfuel',[FuelController::class,'index']);
+Route::post('/fuel/insert',[FuelController::class,'insert']);

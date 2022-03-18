@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\FuelController;
+use App\Http\Controllers\PurchaseController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,3 +30,10 @@ Route::post('/users/insert',[HomeController::class,'insert']);
 //Fuel
 Route::get('/addfuel',[FuelController::class,'index']);
 Route::post('/fuel/insert',[FuelController::class,'insert']);
+Route::get('/viewfuel',[FuelController::class,'list']);
+
+
+//purchares
+Route::get('/addpurchase',[PurchaseController::class,'index']);
+Route::post('/purchase/insert',[PurchaseController::class,'insert']);
+

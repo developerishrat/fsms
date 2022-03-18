@@ -22,7 +22,7 @@
                     <div class="card-body">
                     <h4 class="card-title">Add New Fuel</h4>
 
-                        <form action="{{ url('/fuel/insert') }}" method="post" enctype="multipart/form-data">
+                        <form action="{{ url('/fuel/insert') }}" method="post" >
                             @csrf
                             <div class="row">
                                 <div class="form-group col-lg-4">
@@ -30,10 +30,10 @@
                                     <input type="text" name="name" class="form-control" id="exampleInputName" placeholder="Name">
                                 </div>
 
-                                <div class="form-group col-lg-4">
+                                <!--<div class="form-group col-lg-4">
                                     <label for="image">Image</label>
                                     <input type="file" name="image" class="form-control" id="exampleInputName" placeholder="image">
-                                </div>
+                                </div>-->
 
                                 <div class="form-group col-lg-4">
                                     <label for="Price">Price</label>

@@ -16,7 +16,7 @@ class CreateFuelsTable extends Migration
         Schema::create('fuels', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->text('image')->nullable();
+            //$table->text('image')->nullable();
            // $table->integer('quantity');
             $table->decimal('price',8,2)->default(0.00);
             $table->string('status')->default('active');

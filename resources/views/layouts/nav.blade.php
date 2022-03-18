@@ -105,8 +105,8 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{ '../../pages/forms/basic_elements.html' }}">
-              <span class="menu-title">Forms</span>
+            <a class="nav-link" href="{{ 'viewfuel' }}">
+              <span class="menu-title">Fuel</span>
               <i class="mdi mdi-format-list-bulleted menu-icon"></i>
             </a>
           </li>
